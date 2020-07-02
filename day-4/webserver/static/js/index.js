@@ -7,7 +7,7 @@ weatherForm.addEventListener('submit',(event)=> {
     event.preventDefault();
     console.log("testing: ", searchData.value);
     messgaeOne.textContent ="Loading....."
-    fetch('http://localhost:4000/weather?address='+searchData.value).then((response)=>{
+    fetch('/weather?address='+searchData.value).then((response)=>{
     response.json().then((data) => {
         if(data.error) {
             console.log('error : ', data.error);

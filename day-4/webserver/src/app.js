@@ -3,6 +3,8 @@ const express = require('express');
 const hbs = require('hbs');
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
+const { process } = require('ipaddr.js');
+const port = process.env.PORT || 4000;
 
 
 
@@ -100,6 +102,6 @@ app.get('*', (req, res)=> {
     });
 });
 
-app.listen(4000, () => {
+app.listen(port, () => {
     console.log("Server started at port 4000");
 });
