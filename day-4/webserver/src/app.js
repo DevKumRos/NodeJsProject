@@ -3,10 +3,8 @@ const express = require('express');
 const hbs = require('hbs');
 const geocode = require('./utils/geocode');
 const forecast = require('./utils/forecast');
-const { process } = require('ipaddr.js');
-const port = process.env ? process.env.PORT : 4000;
-
-
+const port = process.env.PORT ? process.env.PORT : 4000;
+console.log("PORT: "+process.env.PORT);
 
 
 //console.log(path.join(__dirname,'../static'));
